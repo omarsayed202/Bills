@@ -41,20 +41,7 @@ class BillsApplicationTests {
 		assertEquals(mockProfit, calculatedProfit);
 	}
 
-	@Test
-	void testgetItemById() {
-		// Arrange
-		long id=4L;
-		Optional<Item> expected= Optional.of(new Item(4L,null,99,100,0,0,8900,LocalDate.of(2024, 9, 29),"omar"));
-		// Mocking repository response
-		System.out.println(expected.get());
-		when(itemRepository.findById(id)).thenReturn(expected);
-		// Act
-		Optional<Item> getItem =itemServices.getbyid(4L);
-		System.out.println(getItem.get());
-		// Assert
-		assertEquals(expected, getItem);
-	}
+
 	@Test
 	void testgetItemById2() {
 		// Arrange
