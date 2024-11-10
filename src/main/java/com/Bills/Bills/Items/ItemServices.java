@@ -4,9 +4,9 @@ import jakarta.persistence.Tuple;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -36,12 +36,7 @@ public List<MonthlyProfitDTO> ProfitPerMoth()
 {
     List<Tuple> results =itemRepository.ProfitperMonth();
     return results.stream()
-            .map(tuple -> new MonthlyProfitDTO(tuple.get("Month", Integer.class), tuple.get("profit", Double.class)))
+            .map(tuple -> new MonthlyProfitDTO(tuple.get("Month", Integer.class), BigDecimal.valueOf(tuple.get("profit", Double.class))))
             .collect(Collectors.toList());
-}
-
-public Optional<Item> getbyid(long id)
-{
-    return itemRepository.findById(id);
 }
 }

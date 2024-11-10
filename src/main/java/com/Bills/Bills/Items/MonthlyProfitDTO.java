@@ -5,9 +5,9 @@ import java.math.BigDecimal;
 public class MonthlyProfitDTO {
 
     private int Month;
-    private Double profit;
+    private BigDecimal profit;
 
-    public MonthlyProfitDTO(int month, Double profit) {
+    public MonthlyProfitDTO(int month, BigDecimal profit) {
         this.Month = month;
         this.profit = profit;
     }
@@ -20,11 +20,11 @@ public class MonthlyProfitDTO {
         this.Month = month;
     }
 
-    public Double getProfit() {
+    public BigDecimal getProfit() {
         return profit;
     }
 
-    public void setProfit(Double profit) {
+    public void setProfit(BigDecimal profit) {
         this.profit = profit;
     }
 }

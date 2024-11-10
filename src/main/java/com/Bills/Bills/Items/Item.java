@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 @Data
 @Entity
@@ -22,18 +21,6 @@ public class Item {
     private double profit;
     private LocalDate date;
     private String username;
-
-    public Item(Long id, String name, long count, double itemPrice, double buying, double saleing, double profit, LocalDate date, String username) {
-        this.id = id;
-        Name = name;
-        this.count = count;
-        ItemPrice = itemPrice;
-        Buying = buying;
-        Saleing = saleing;
-        this.profit = profit;
-        this.date = date;
-        this.username = username;
-    }
 
     public Long getId() {
         return id;
@@ -106,5 +93,4 @@ public class Item {
     public void setUsername(String username) {
         this.username = username;
     }
-
 }
