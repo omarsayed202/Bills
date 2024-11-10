@@ -11,8 +11,5 @@ public class BillsApplication extends SpringBootServletInitializer {
 	public static void main(String[] args) {
 		SpringApplication.run(BillsApplication.class, args);
 	}
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		return builder.sources(BillsApplication.class);
-	}
+
 }
