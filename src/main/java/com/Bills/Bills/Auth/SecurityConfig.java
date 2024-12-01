@@ -27,7 +27,7 @@ public class SecurityConfig {
                 )
                 // Disable CSRF for testing; adjust as needed
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/api/auth/login", "/api/auth/register","/additem","/getall","/getbydate","/getprofit","getprofitpermoth").permitAll() // Allow access to these endpoints
+                        .requestMatchers("/api/auth/login", "/api/auth/register","/additem","/getall","/getbydate","/getprofit","/getprofitpermoth","/loadexpenses").permitAll() // Allow access to these endpoints
                         .anyRequest().authenticated() // All other requests require authentication
 
                 );
